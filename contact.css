@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #F1F2F4;
+  margin: 0;
+}
+
+.h1 {
+  color: #8c0414;
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+input[type="text"] {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  height: 50px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  margin-top: 30px;
+  cursor: pointer;
+  border-radius: 40px;
+  font-weight: 400;
+  transition: all 0.2s ease;
+  background-color: #8b0b0b;
+  
+}
+
+/* styling for banner */
+.banner {
+  width: 100%;
+  min-height: 40vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)), url('/img/pupbg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 90%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.banner .text {
+  color: white;
+  margin: 60px;
+}
+
+.banner .text h1 {
+  font-size: 40px;
+  padding: 30px;
+}
+
+/* styling for event boxes */
+section .container {
+    margin: 50px 70px;
+}
+
+.form-container .title {
+    font-size: large;
+    color: black;
+    text-align: center;
+}
+
+.line {
+    width: 150px;
+    height: 4px;
+    background: #780000;
+    margin: 10px auto;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+
+/* CSS styling for the form */
+.form-container {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.form-container h1 {
+  text-align: center;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea,
+.form-container button {
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.flex-con {
+  display: flex;
+}
+
+.flex-con form {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.map-wrapper {
+  flex: 1;
+}
+
+.output-container {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid gray;
+  display: none;
+}
+
+.cd_title {
+  padding-bottom: 5px;
+}

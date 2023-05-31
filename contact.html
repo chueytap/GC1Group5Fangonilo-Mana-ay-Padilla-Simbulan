@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BSCS 3-1 | Web Development</title>
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="styles/nav.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+  <link rel="icon" type="image/x-icon" href="img/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav>
+    <ul>
+      <li class="logo">triwan</li>
+      <li class="items"><a href="index.html">Home</a></li>
+      <li class="items"><a href="https://www.facebook.com/PUP-BS-Computer-Science-3-1-104290219160861">Announcements</a>
+      </li>
+      <li class="items"><a
+          href="https://drive.google.com/drive/folders/1i0n0mAhUrsGEtw1UFgS_PkYh5yl1nhvS?usp=share_link">Files</a></li>
+      <li class="items"><a href="contact.html">Contact Us</a></li>
+      <li class="icon"><a href=""><i class="fa-solid fa-bars" style="color: #ffffff;"></i></a></li>
+    </ul>
+  </nav>
+
+  <!-- toggle function for navbar -->
+  <script>
+    $(document).ready(function () {
+      $('.icon').click(function () {
+        $('.items').toggleClass("show");
+        $('ul li').toggleClass("hide");
+      });
+    });
+  </script>
+
+  <!-- header/banner -->
+  <section class="banner">
+    <div class="text">
+      <h1>Events > Web Development</h1>
+      <p>Welcome to the BSCS 3-1 Web Development webpage!</p>
+      <br>
+      <p>
+        Here you will find all the essential dates for the course's midterm, including the examination date, submission
+        deadlines for assignments, and any important announcements. Stay updated and mark your calendars to ensure a
+        successful midterm experience in this exciting web development journey.
+      </p>
+    </div>
+  </section>
+
+  <!-- announcements/events list -->
+  <section>
+    <div class="container">
+      <div class="events">
+        <div class="title">
+          <h1>Announcements</h1>
+          <div class="line"></div>
+        </div>
+
+        <div class="boxes">
+          <div class="box" id="box1">
+            <div class="date_con">
+              <div class="date">
+                <h2>
+                  31 <br><span>May</span>
+                </h2>
+              </div>
+            </div>
+            <div class="details">
+              <h3>Group Collaboration #1</h3>
+              <p class="desc">
+                Attention all BSCS 3-1 students! May 31 marks an important deadline for Group Collaboration #1 for your
+                final term.
+
+                <span class="card_read-more">Don't forget to submit your work on time through the designated Google
+                  Classroom to ensure a successful start to your web development journey. Good luck!</span>
+              </p>
+              <div class="btn_con">
+                <a href="https://drive.google.com/drive/folders/1i0n0mAhUrsGEtw1UFgS_PkYh5yl1nhvS?usp=share_link"
+                  class="btn" hidden>View Details</a>
+                <p class="read-more-btn">Read More</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="box" id="box2">
+            <div class="date_con">
+              <div class="date">
+                <h2>
+                  3 <br><span>June</span>
+                </h2>
+              </div>
+            </div>
+            <div class="details">
+              <h3>Lab Activity #2</h3>
+              <p class="desc">
+                Calling all BSCS 3-1 students! Circle June 3 on your calendars as it's the day for the much-awaited
+                Lab Activity #2.
+
+                <span class="card_read-more">Get ready to showcase your creative skills and present your back-end
+                  website, crafted with HTML, CSS, JavaScript to your peers and instructors. Prepare to impress and
+                  shine as you
+                  demonstrate your web development prowess in this exciting milestone of the course.</span>
+              </p>
+              <div class="btn_con">
+                <a href="https://drive.google.com/drive/folders/1i0n0mAhUrsGEtw1UFgS_PkYh5yl1nhvS?usp=share_link"
+                  class="btn" hidden>View Details</a>
+                <p class="read-more-btn">Read More</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="box" id="box3">
+            <div class="date_con">
+              <div class="date">
+                <h2>
+                  07 <br><span>June</span>
+                </h2>
+              </div>
+            </div>
+            <div class="details">
+              <h3>Quiz 1 - JavaScript</h3>
+              <p class="desc">
+                Attention BSCS 3-1 students! June 7 is the highly anticipated day of your quiz 1 examination for the
+                final term.
+
+                <span class="card_read-more">The exam will consist of 30-35 items covering topics from JavaScript,
+                  including multiple-choice questions. You will have until 10:30 AM to complete the
+                  exam via the provided Google Form. Prepare yourself, review diligently, and showcase your knowledge
+                  and understanding of web development concepts to excel in this crucial evaluation. Best of luck to
+                  everyone!</span>
+              </p>
+              <div class="btn_con">
+                <a href="https://drive.google.com/drive/folders/1i0n0mAhUrsGEtw1UFgS_PkYh5yl1nhvS?usp=share_link"
+                  class="btn" hidden>View Details</a>
+                <p class="read-more-btn">Read More</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- read more/read less functionality -->
+  <script>
+    const readMoreBtns = document.querySelectorAll('.read-more-btn');
+
+    readMoreBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const card = btn.parentNode.parentNode;
+        const text = card.querySelector('.card_read-more');
+        const viewDetailsBtn = card.querySelector('.btn');
+
+        text.classList.toggle('card_read-more--open');
+        btn.textContent = btn.textContent.includes('Read More') ? 'Read Less' : 'Read More';
+
+        if (text.classList.contains('card_read-more--open')) {
+          viewDetailsBtn.removeAttribute('hidden');
+        } else {
+          viewDetailsBtn.setAttribute('hidden', true);
+        }
+      });
+    });
+  </script>
+
+  <!-- removes hidden attribute for screen sizes > 450px -->
+  <script>
+    const viewDetailsButton = document.querySelectorAll('.btn');
+
+    function toggleButtonVisibility() {
+      if (window.innerWidth > 450) {
+        viewDetailsButton.forEach(button => {
+          button.removeAttribute('hidden');
+        });
+      } else {
+        viewDetailsButton.forEach(button => {
+          button.setAttribute('hidden', true);
+        });
+      }
+    }
+
+    window.addEventListener('resize', toggleButtonVisibility);
+
+  </script>
+
+  <!-- footer -->
+  <footer>
+    <div class="content">
+      <h3>triwan</h3>
+      <p>Triwan is a group of third-year college students pursuing a Bachelor of Science in Computer Science at
+        Polytechnic University of the Philippines (Main Campus). They are dedicated to learning and applying their
+        knowledge in Computer Science to develop innovative solutions that can make a positive impact on society.</p>
+
+      <ul class="socials">
+        <li><a href="https://www.facebook.com/PUP-BS-Computer-Science-3-1-104290219160861"><i
+              class="fa-brands fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UCb5wnR139xV9XLK3lNm2hrw"><i class="fa-brands fa-youtube"></i></a>
+        </li>
+      </ul>
+    </div>
+    <div class="bottom">
+      <p>copyright &copy;2023 triwan. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
